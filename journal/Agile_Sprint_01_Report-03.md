@@ -81,4 +81,4 @@ List the concrete, actionable tasks you will complete before the next class/repo
 
 - Test project via npm run dev to confirm it starts and renders the demo.
 
-- Commit all files and optionally push to the project repository in github.
+- Commit all files and push to the project repository in github.
