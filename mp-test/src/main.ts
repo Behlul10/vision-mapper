@@ -8,7 +8,6 @@ import {
 async function main() {
   // Start with CDN WASM to simplify
   const filesetResolver = await FilesetResolver.forVisionTasks("/wasm");
-
   const landmarker = await PoseLandmarker.createFromOptions(filesetResolver, {
     baseOptions: {
       modelAssetPath: "/models/pose_landmarker_full.task",
