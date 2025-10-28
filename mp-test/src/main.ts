@@ -6,7 +6,7 @@ import {
 } from "@mediapipe/tasks-vision";
 
 async function main() {
-  // Start with CDN WASM to simplify
+  // Start with CDN (content delivery network) WASM (wasm is web assembly binary instructions) to simplify
   const filesetResolver = await FilesetResolver.forVisionTasks("/wasm");
   const landmarker = await PoseLandmarker.createFromOptions(filesetResolver, {
     baseOptions: {
@@ -18,7 +18,7 @@ async function main() {
     minPoseDetectionConfidence: 0.5,
     minPosePresenceConfidence: 0.5,
     minTrackingConfidence: 0.5,
-    outputSegmentationMasks: false,
+    outputSegmentationMasks: true,
   });
 
   // Camera/canvas setup (same as before)
