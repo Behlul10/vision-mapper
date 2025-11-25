@@ -6,8 +6,9 @@ Vision Mapper is an experimental playground for building a full MediaPipe-to-3D 
 - `mp-test/` – current presentation-ready Vite app with webcam pose tracking via `@mediapipe/tasks-vision`.
 - `mp-pipeline-remake/` – active work-in-progress aiming to integrate Three.js and better state management.
 - `mediapipe-pipeline-test-demo/` – minimal standalone TypeScript demo that exercises the MediaPipe pipeline without Vite.
-- `documents/` – project timeline, presentation material, and other planning docs.
+- `documents/` – project timeline, presentation material, and other planning docs. See the [owner’s manual](documents/owners-manual.md) for detailed operating procedures.
 - `journal/` – sprint reports, meeting notes, and reference write-ups.
+- `documents/owners-manual.md` – operator handbook with setup, demo, and maintenance procedures.
 
 ## Prototype Status
 | Directory | Status | Notes |
@@ -46,6 +47,7 @@ Then open the printed localhost URL. Grant camera permissions when prompted. Bui
 - MediaPipe Tasks Vision docs: https://developers.google.com/mediapipe/solutions/vision/pose_landmarker/web_js
 - Internal sprint notes: `journal/`
 - Presentation outline: `documents/presentation.md`
+- Owner’s manual: [documents/owners-manual.md](documents/owners-manual.md)
 
 Contributions, experiments, and documentation updates all happen directly in this repository—feel free to branch per prototype as the pipeline evolves.
 
