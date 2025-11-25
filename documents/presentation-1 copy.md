@@ -1,1 +1,0 @@
-https://docs.google.com/presentation/d/1HLb2Oik5JybYqgV0QIiFaN0mpbVJt2l6-rgo8lNXlLA/edit?usp=drivesdk
