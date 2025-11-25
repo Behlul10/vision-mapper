@@ -1,0 +1,7 @@
+# macOS noise
+.DS_Store
+
+# npm / vite artifacts that may appear outside subprojects
+node_modules/
+dist/
+
