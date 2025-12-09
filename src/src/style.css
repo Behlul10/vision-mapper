@@ -1,0 +1,83 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Prevents scrolling */
+  background-color: #000;
+}
+
+/* The 3D scene covers the whole screen */
+#3d-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* The webcam preview */
+#output_canvas {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  /* Small preview */
+  height: 150px;
+  z-index: 2;
+  border: 5px solid grey;
+  border-radius: 10px;
+  transform: scaleX(-1);
+  /* Mirror the webcam like a mirror */
+}
+
+/* The UI layer sits on top of everything */
+#ui-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+/* UI Buttons */
+.ui-btn {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.ui-btn:hover {
+  background: #555;
+}
+
+/* Big Countdown Numbers */
+#countdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  color: white;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  pointer-events: none;
+}

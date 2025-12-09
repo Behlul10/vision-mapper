@@ -8,7 +8,7 @@
 
 ---
 
-## Current Status (October 27, 2024 - Week 9)
+## Project Status (October 27, 2024 - Week 9)
 **What you have working:**
 - ✅ `mp-test`: Working MediaPipe pose detection with webcam
 - ✅ Basic Vite + TypeScript setup
@@ -23,11 +23,11 @@
 
 ### Week 9 (Oct 27 - Nov 2) 🔄 CURRENT WEEK
 **Focus:** Three.js Integration & Basic 3D Setup
-- [ ] Install Three.js in mp-test project
-- [ ] Create basic 3D scene with simple skeleton
-- [ ] Extract landmark data from MediaPipe (console.log the coordinates)
-- [ ] Map at least 3-4 key landmarks to 3D positions
-- [ ] Create basic joint rotation calculations
+- [x] Install Three.js in mp-test project
+- [x] Create basic 3D scene with simple skeleton
+- [x] Extract landmark data from MediaPipe (console.log the coordinates)
+- [x] Map at least 3-4 key landmarks to 3D positions
+- [x] Create basic joint rotation calculations
 
 **Deliverables:**
 - Three.js scene with simple 3D skeleton
@@ -38,11 +38,11 @@
 
 ### Week 10 (Nov 3-9)
 **Focus:** 3D Skeleton Animation
-- [ ] Create full body skeleton in Three.js (head, torso, arms, legs)
-- [ ] Map all 33 pose landmarks to skeleton joints
-- [ ] Implement basic joint rotation from landmarks
-- [ ] Add smoothing to reduce jittery movement
-- [ ] Test with different poses
+- [x] Create full body skeleton in Three.js (head, torso, arms, legs)
+- [x] Map all 33 pose landmarks to skeleton joints
+- [x] Implement basic joint rotation from landmarks
+- [x] Add smoothing to reduce jittery movement
+- [x] Test with different poses
 
 **Deliverables:**
 - Working 3D skeleton that follows pose
@@ -53,7 +53,7 @@
 
 ### Week 11 (Nov 10-16)
 **Focus:** UI Controls
-- [ ] Add basic UI controls (start/stop, sensitivity)
+- [x] Add basic UI controls (start/stop, sensitivity)
 - [ ] Add mirror mode toggle
 
 **Deliverables:**
@@ -66,7 +66,7 @@
 ### Week 12 (Nov 17-23)
 **Focus:** Polish & Export Features
 - [ ] Add landmark data export (JSON/CSV)
-- [ ] Implement screenshot functionality
+- [x] Implement screenshot functionality
 - [ ] Add camera controls (zoom, rotate view)
 - [ ] Improve UI design and layout
 - [ ] Add error handling and loading states
