@@ -22,5 +22,5 @@ Open the printed localhost URL (default http://127.0.0.1:8080). Grant camera per
 ## Notes
 - Because this is served statically, the script imports directly from `./node_modules/@mediapipe/tasks-vision`. If that ever breaks, switch to an import map or bundle with Vite.
 - WASM assets are fetched from the CDN (`https://cdn.jsdelivr.net/...`). Update to the pinned version you trust before demos.
-- This repo copy is read-only during presentations; do experiments in `mp-test/` or `mp-pipeline-remake/` if you need bundler features or TypeScript tooling.
+- This repo copy is read-only during presentations; do experiments in `src/` (the main demo) or `mp-test/` (legacy) if you need bundler features.
 

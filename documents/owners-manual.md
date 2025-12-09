@@ -7,8 +7,9 @@ This manual explains how to operate, maintain, and extend the Vision Mapper prot
 ## 1. System Overview
 - **Goal:** Convert real-time MediaPipe pose landmarks into data suitable for animating 3D rigs (future Three.js integration).
 - **Repositories inside:** multiple Vite apps (`mp-test`, `mp-pipeline-remake`) plus a static MediaPipe demo and planning docs/journals.
-- **Primary demo:** `mp-test` – reliable webcam pose tracking, ready for presentations.
-- **R&D prototype:** `mp-pipeline-remake` – work towards Three.js skeletons and richer UI.
+- **Primary demo:** `src/` – The completed Vision Mapper v1 with MediaPipe + Three.js + UI.
+- **Legacy demo:** `mp-test` – reliable webcam pose tracking (no 3D).
+- **Deprecated:** `mp-pipeline-remake` – older WIP folder.
 - **Reference:** `mediapipe-pipeline-test-demo` – static TypeScript example mirroring official MediaPipe samples.
 
 ---
@@ -24,8 +25,9 @@ This manual explains how to operate, maintain, and extend the Vision Mapper prot
 ## 3. Directory Responsibilities
 | Directory | Purpose | Notes |
 | --- | --- | --- |
-| `mp-test/` | Presentation build | Keeps WASM + model files under `public/`; run via Vite. |
-| `mp-pipeline-remake/` | WIP Three.js integration | Shares the same MediaPipe dependency, but UI/loop unfinished. |
+| `src/` | **Final Demo** | The main application. Run `npm run dev` here. |
+| `mp-test/` | Legacy build | Keeps WASM + model files under `public/`; run via Vite. |
+| `mp-pipeline-remake/` | Deprecated | Old WIP folder. |
 | `mediapipe-pipeline-test-demo/` | Static TS demo | Uses CDN WASM, served via `http-server`. |
 | `documents/` | Manuals, timelines, presentations | Update this manual + timeline before milestones. |
 | `journal/` | Sprint reflections and references | Use for weekly status writing. |
@@ -43,13 +45,19 @@ npm install --prefix mp-pipeline-remake
 npm install --prefix mediapipe-pipeline-test-demo
 ```
 
-### 4.2 Running the Demo (`mp-test`)
+### 4.2 Running the Main Demo (`src/`)
 ```bash
-cd mp-test
+cd src
 npm run dev
 # open http://localhost:5173 and allow webcam
 ```
-Use this build during live demos. Confirm the landmarks render before presenting.
+Use this build during live demos. It has the 3D skeleton and UI controls.
+
+### 4.3 Running Legacy Demo (`mp-test`)
+```bash
+cd mp-test
+npm run dev
+```
 
 ### 4.3 Running Experimental Build (`mp-pipeline-remake`)
 ```bash

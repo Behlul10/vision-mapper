@@ -1,6 +1,8 @@
 # mp-test
 
-`mp-test` is the current Vite + TypeScript prototype for the Vision Mapper project. It streams webcam footage, runs MediaPipe’s `PoseLandmarker` in real time, and draws landmarks/connectors onto an HTML canvas for quick verification before wiring the data into Three.js.
+> **NOTE:** This is a **Legacy Prototype**. The main demo is now located in `src/`.
+
+`mp-test` was an early Vite + TypeScript prototype. It streams webcam footage and runs MediaPipe’s `PoseLandmarker` but lacks the 3D integration found in the main demo.
 
 ## Quick Start
 

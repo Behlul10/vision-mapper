@@ -13,9 +13,10 @@ Vision Mapper is an experimental playground for building a full MediaPipe-to-3D 
 ## Prototype Status
 | Directory | Status | Notes |
 | --- | --- | --- |
-| `mp-test/` | ✅ Demo-ready | Use this during presentations; README includes run instructions and explains the WASM/model layout. |
-| `mp-pipeline-remake/` | 🚧 In progress | Three.js skeleton + richer UI planned; README tracks remaining tasks. |
-| `mediapipe-pipeline-test-demo/` | 🧪 Reference | Static TypeScript demo that mirrors MediaPipe docs; see its README for `http-server` instructions. |
+| `src/` | ✅ Final Demo | **The Main Event**. Full MediaPipe + Three.js + UI integration. Run `npm run dev` here. |
+| `mp-test/` | 🧪 Legacy Demo | Older prototype. Good for testing basic MediaPipe without 3D. |
+| `mp-pipeline-remake/` | � Deprecated | Superseded by `src/`. |
+| `mediapipe-pipeline-test-demo/` | 🧪 Reference | Static TypeScript demo that mirrors MediaPipe docs. |
 
 ## Prerequisites
 - Node.js 20+ (aligns with modern Vite defaults).
