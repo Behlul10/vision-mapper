@@ -56,11 +56,24 @@ export class Scene {
             const landmark = landmarks[i];
             const mesh = this.meshes[i];
 
+            // Check visibility using the normalized landmarks (which usually carry the reliable visibility score)
+            // Or use the one from worldLandmarks if available.
+            // result.landmarks[0][i].visibility is the standard way to check.
+            const visibility = result.landmarks && result.landmarks[0] && result.landmarks[0][i]
+                ? result.landmarks[0][i].visibility ?? 1
+                : 1;
+
             if (mesh) {
+                // If visibility is too low (e.g. < 0.5), hide the mesh to avoid jitter
+                if (visibility < 0.5) {
+                    mesh.visible = false;
+                    continue; // Skip position update
+                } else {
+                    mesh.visible = true;
+                }
+
                 const target = new THREE.Vector3(-landmark.x, -landmark.y, -landmark.z);
-
                 mesh.position.lerp(target, 0.3);
-
             }
         }
     }

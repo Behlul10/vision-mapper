@@ -30,6 +30,9 @@ export class Vision {
             },
             runningMode: "VIDEO",
             numPoses: 1,
+            minPoseDetectionConfidence: 0.7,
+            minPosePresenceConfidence: 0.7,
+            minTrackingConfidence: 0.7,
         });
     }
 
