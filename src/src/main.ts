@@ -5,7 +5,7 @@ import { UI } from "./ui";
 /*
  * We need 3 things from out html
  * A canvas for webcam video
- * A container for our 3D worldx
+ * A container for our 3D world
  * A container for our buttons (UI)
  */
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
@@ -23,7 +23,7 @@ const canvas = document.getElementById("output_canvas") as HTMLCanvasElement;
 
 let paused = false;
 
-//unpause when capture is clicked 
+//unpause when capture is clicked
 ui.captureBtn.addEventListener("click", () => {
   paused = false;
 });
@@ -39,14 +39,17 @@ ui.onCopy = () => {
     if (!blob) return; // <--- Stop if there's no image
 
     const item = new ClipboardItem({ "image/png": blob });
-    navigator.clipboard.write([item])
+    navigator.clipboard
+      .write([item])
       .then(() => {
         ui.copyBtn.innerText = "Copied!";
-        setTimeout(() => { ui.copyBtn.innerText = "Copy PNG"; }, 2000);
+        setTimeout(() => {
+          ui.copyBtn.innerText = "Copy PNG";
+        }, 2000);
       })
-      .catch(err => console.error("Copy failed:", err));
+      .catch((err) => console.error("Copy failed:", err));
   });
-}
+};
 
 async function init() {
   await vision.initialize();
@@ -59,11 +62,15 @@ function loop() {
   //draw the webcam preview to the corner box
   vision.drawVideo(canvas);
 
-  //detect pose
-  const result = vision.detect();
-  if (result && result.landmarks.length > 0) {
-    scene.updateLandmarks(result);
+  //only update the skeleton if not paused
+  if (!paused) {
+    //detect pose
+    const result = vision.detect();
+    if (result && result.landmarks.length > 0) {
+      scene.updateLandmarks(result);
+    }
   }
+
   scene.render();
   requestAnimationFrame(loop);
 }
